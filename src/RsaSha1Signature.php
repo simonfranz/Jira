@@ -78,7 +78,7 @@ class RsaSha1Signature extends Signature implements SignatureInterface
      *
      * @return string
      */
-    protected function baseString(Url $url, $method = 'POST', array $parameters = [])
+    protected function baseString($url, $method = 'POST', array $parameters = [])
     {
         $baseString = rawurlencode($method).'&';
         $schemeHostPath = $url->getScheme().'://'.$url->getHost();
